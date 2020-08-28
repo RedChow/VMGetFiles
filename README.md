@@ -35,7 +35,10 @@ Similarly, if a file has been uploaded we create an instance of FileWatcher.
 FileWatcher is a subclass of SubFolderWatcher.
 Once an instance of the two has been created, we get all the last modified times of all the folder contents or file.
 A timer then starts to check if the modified times of the contents/file has changed.
-If no change is detected, the folder or file is safe to copy to the host machine.
+If no change in the modified time is detected, the folder or file is safe to copy to the host machine.
+This will ensure we don't try to download an incomplete folder or file.
+(NOTE: On Windows, I think you have to use something other than stat(path).st_mtime. I can't remember off the top of my head
+which stat to use.)
 Lastly, once a folder or file has been copied, we emit a signal back to MainWatcher to remove the path of the copied folder/file.
 </p>
 
