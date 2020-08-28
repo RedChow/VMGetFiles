@@ -14,8 +14,8 @@ uploaded everything I should and so on.
 </p>
 <h2>Basics of the Program</h2>
 <p>
-The download portion of the program uses PyQt5, but PyQt5 isn't absolutely necessary; it just makes
-some things a bit easier. One such item is the QFileSystemWatcher. This will detect changes in a folder.
+The download portion of the program uses PyQt5. Something similar could have been done without PyQt5; it just makes
+some things a bit easier. One such item is the QFileSystemWatcher and signals/slots. QFileSystemWatcher will detect changes in a folder.
 Once changes have been detected, you can connect slots to perform work on that change.
 </p>
 
