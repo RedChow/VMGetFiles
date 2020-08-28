@@ -1,4 +1,4 @@
-<h1>Moving Files From Virtual Machine Automatically with PyQt and Python</h1>
+<h1>Moving Files From Virtual Machines to Host Machine Automatically with PyQt and Python</h1>
 <p>
 At home I run a Fedora 31 Workstation, along with several other Linux distros on other machines. But, the Fedora
 workstation serves as one of two Plex servers (mainly movies/tv/sports while the other serves photos and family videos) and code development. 
