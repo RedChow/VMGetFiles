@@ -46,5 +46,5 @@ Lastly, once a folder or file has been copied, we emit a signal back to MainWatc
 <p>
 There are some commented out sections in the copy_folder and copy_file methods. These code blocks run shutil.chown to change permissions 
 on the file(s). chmod is also called to change read/write/execute permissions. This is necessary sometimes for the Plex server; files
-need certain permissions in order for it to be shown.
+need certain permissions in order for it to be shown. Also, the __eq__ method should use isinstance instead of a try-except block. Leaving it as is since it works and it's just for home use.
 </p>
