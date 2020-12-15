@@ -88,7 +88,7 @@ class SubFolderWatcher(QObject):
     def connect(self):
         self.watcher.addPaths([self.base_path])
         self.watcher.directoryChanged.connect(lambda y: self.directory_changed(y))
-        self.watcher.fileChanged.connect(lambda x: self.file_changed)
+        self.watcher.fileChanged.connect(lambda x: self.file_changed(x))
         self.timer.timeout.connect(self.check_files)
         self.timer.start(timer_delay*1000)
 
